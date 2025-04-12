@@ -1,5 +1,6 @@
-# ollama_json_parserInstall 
-ollama https://ollama.com/download
+
+# ollama_json_parser
+Install ollama https://ollama.com/download
 install it and in cmd try run using ollama run llama3
 now, write code, and see which port it has started, if not the local 11434 that is ollama.
 netstat -ano | findstr :11434
