@@ -1,0 +1,11 @@
+{
+    "relationships": [
+        {
+            "from_table": "employees",
+            "from_column": "department_id",
+            "to_table": "departments",
+            "to_column": "department_id",
+            "transformation": null
+        }
+    ]
+}

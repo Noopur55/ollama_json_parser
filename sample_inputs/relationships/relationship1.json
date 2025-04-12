@@ -1,0 +1,23 @@
+{
+  "relationships": [
+      {
+          "from_table": "sales_data",
+          "from_column": "customer_id",
+          "to_table": "customer_info",
+          "to_column": "customer_id",
+          "transformation": null
+      },
+      {
+          "from_table": "sales_data",
+          "from_column": "amount",
+          "to_table": "aggregated_sales",
+          "to_column": "total_sales",
+          "transformation": {
+              "type": "aggregation",
+              "method": "sum",
+              "group_by": "region",
+              "filter": "amount > 1000"
+          }
+      }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "input_tables": [
+    {
+      "name": "sales_data",
+      "columns": [
+        "sale_id",
+        "customer_id",
+        "amount"
+      ]
+    },
+    {
+      "name": "customer_info",
+      "columns": [
+        "customer_id",
+        "name",
+        "region"
+      ]
+    }
+  ],
+  "output_tables": [
+    {
+      "name": "aggregated_sales",
+      "columns": [
+        "region",
+        "total_sales"
+      ]
+    }
+  ],
+  "column_mapping": {
+    "sales_data.customer_id": "customer_info.customer_id",
+    "sales_data.amount": "aggregated_sales.total_sales"
+  },
+  "transformation_details": {
+    "sales_data.amount": {
+      "type": "aggregation",
+      "method": "sum",
+      "group_by": "region",
+      "filter": "amount > 1000"
+    }
+  }
+}

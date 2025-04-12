@@ -1,0 +1,22 @@
+You are a helpful assistant. Your task is to transform the given entity and relationship data into a structured target JSON format. Follow the format below:
+
+{
+  "input_tables": [ ... ],  # List of tables that are inputs
+  "output_tables": [ ... ],  # List of tables that are outputs
+  "column_mapping": { ... },  # Mapping of columns from input to output tables
+  "transformation_details": { ... }  # Transformation details for each column mapping
+}
+
+Make sure to extract the following information from the entity and relationship data:
+- `input_tables`: Tables that serve as input in the relationships.
+- `output_tables`: Tables that serve as output in the relationships.
+- `column_mapping`: Map columns from input tables to the corresponding columns in output tables.
+- `transformation_details`: Any transformation, joiners, or filters that apply to the relationships.
+
+ENTITY DATA:
+<ENTITY_DATA>
+
+RELATIONSHIP DATA:
+<RELATIONSHIP_DATA>
+
+Ensure the final output is a valid JSON structure, with all necessary fields correctly populated.

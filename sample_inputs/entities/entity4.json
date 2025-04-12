@@ -1,0 +1,12 @@
+{
+    "tables": [
+        {
+            "name": "employees",
+            "columns": ["employee_id", "name", "hire_date", "salary"]
+        },
+        {
+            "name": "departments",
+            "columns": ["department_id", "department_name"]
+        }
+    ]
+}

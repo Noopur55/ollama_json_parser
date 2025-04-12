@@ -1,0 +1,16 @@
+{
+  "tables": [
+      {
+          "name": "sales_data",
+          "columns": ["sale_id", "customer_id", "amount"]
+      },
+      {
+          "name": "customer_info",
+          "columns": ["customer_id", "name", "region"]
+      },
+      {
+          "name": "aggregated_sales",
+          "columns": ["region", "total_sales"]
+      }
+  ]
+}
