@@ -1,0 +1,50 @@
+{
+  "input_tables": [
+    {
+      "name": "sales",
+      "columns": [
+        "sale_id",
+        "store_id",
+        "product_id",
+        "quantity"
+      ]
+    },
+    {
+      "name": "stores",
+      "columns": [
+        "store_id",
+        "store_name",
+        "location"
+      ]
+    },
+    {
+      "name": "products",
+      "columns": [
+        "product_id",
+        "product_name",
+        "category"
+      ]
+    }
+  ],
+  "output_tables": [
+    {
+      "name": "sales_product_join"
+    },
+    {
+      "name": "stores_quantity_sum"
+    }
+  ],
+  "column_mapping": {
+    "sales.product_id": "products.product_id",
+    "quantity": "stores.store_id"
+  },
+  "transformation_details": {
+    "sales.product_id": null,
+    "quantity": {
+      "type": "join",
+      "method": "sum",
+      "group_by": "store_id",
+      "filter": "quantity > 50"
+    }
+  }
+}

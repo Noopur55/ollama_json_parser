@@ -1,0 +1,22 @@
+{
+  "relationships": [
+      {
+          "from_table": "orders",
+          "from_column": "customer_id",
+          "to_table": "customers",
+          "to_column": "customer_id",
+          "transformation": null
+      },
+      {
+          "from_table": "orders",
+          "from_column": "total_amount",
+          "to_table": "products",
+          "to_column": "price",
+          "transformation": {
+              "type": "multiplication",
+              "method": "total_amount * price",
+              "filter": "order_date > '2022-01-01'"
+          }
+      }
+  ]
+}

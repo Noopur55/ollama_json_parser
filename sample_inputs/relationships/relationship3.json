@@ -1,0 +1,23 @@
+{
+    "relationships": [
+        {
+            "from_table": "sales",
+            "from_column": "product_id",
+            "to_table": "products",
+            "to_column": "product_id",
+            "transformation": null
+        },
+        {
+            "from_table": "sales",
+            "from_column": "quantity",
+            "to_table": "stores",
+            "to_column": "store_id",
+            "transformation": {
+                "type": "aggregation",
+                "method": "sum",
+                "group_by": "store_id",
+                "filter": "quantity > 50"
+            }
+        }
+    ]
+}

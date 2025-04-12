@@ -1,0 +1,16 @@
+{
+    "tables": [
+        {
+            "name": "sales",
+            "columns": ["sale_id", "store_id", "product_id", "quantity"]
+        },
+        {
+            "name": "stores",
+            "columns": ["store_id", "store_name", "location"]
+        },
+        {
+            "name": "products",
+            "columns": ["product_id", "product_name", "category"]
+        }
+    ]
+}
